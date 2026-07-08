@@ -127,7 +127,71 @@
 	VALUES('sssdf','Ricarda','Sonrics')
 
 	-- Restriccion UNIQUE
+	CREATE TABLE categoria(
+	categoria_id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	nombre VARCHAR (20) NOT NULL UNIQUE,
+	activo BIT NOT NULL,
+	);
+	GO
+
+	INSERT INTO categoria
+	VALUES(UPPER('carnes frias'),1);
+
+	INSERT INTO categoria
+	VALUES(UPPER('carnes frias'),1);
+
+	DROP TABLE categoria;
+	GO
+
+	CREATE TABLE categoria(
+	categoria_id INT NOT NULL IDENTITY(1,1),
+	CONSTRAINT pk_categoria
+	PRIMARY KEY (categoria_id),
+	nombre VARCHAR (20) NOT NULL
+	CONSTRAINT uq_categoria_nombre
+	UNIQUE,
+	activo BIT NOT NULL
+	);
+	GO
+
+	DROP TABLE categoria;
+	GO
+
+	CREATE TABLE categoria(
+	categoria_id INT NOT NULL IDENTITY(1,1),
+	nombre VARCHAR (20) NOT NULL,
+	activo BIT NOT NULL,
+	CONSTRAINT pk_categoria
+	PRIMARY KEY (categoria_id),
+	constraint uq_categoria_nombre
+	UNIQUE (nombre)
+	);
+	GO
+
+	-- Restriccion default
+	CREATE TABLE categoria(
+	categoria_id INT NOT NULL IDENTITY(1,1),
+	nombre VARCHAR (20) NOT NULL,
+	activo BIT NOT NULL DEFAULT 1,
+	CONSTRAINT pk_categoria
+	PRIMARY KEY (categoria_id),
+	constraint uq_categoria_nombre
+	UNIQUE (nombre)
+	);
+	GO
+
+	INSERT INTO(nombre, activo)
+	VALUES('carnes frias', DEAFAULT);
+
+	INSERT INTO categoria(nombre)
+	VALUES('lacteos');
 	
+	SELECT *
+	FROM categoria;
+
+	-- TODO: CREAR LAS TABLAS DE LAS OTRAS DOS FROMAS
+	-- TODO: CHECK
+
 
 
 
