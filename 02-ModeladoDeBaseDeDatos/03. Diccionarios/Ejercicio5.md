@@ -179,4 +179,4 @@ Permite controlar la estructura corporativa global, los esquemas de supervisión
 **Version 2:**  
 
 
-![Diagrama relacional Ej5](/img/Relacional/Relacional06.jpg)
+![Diagrama relacional Ej6](/img/Relacional/Relacional06.jpg)
