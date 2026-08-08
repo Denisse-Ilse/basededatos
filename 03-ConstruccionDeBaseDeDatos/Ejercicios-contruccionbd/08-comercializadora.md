@@ -198,4 +198,4 @@ GO
 
 ## Diagrma
 
-![Diagrama 8]()
+![Diagrama de base de datos](/img/Construccion/construccion08.jpg)
