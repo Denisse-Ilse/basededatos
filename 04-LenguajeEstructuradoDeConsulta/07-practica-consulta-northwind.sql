@@ -67,3 +67,4 @@ SELECT
 FROM Customers AS c
 WHERE c.CompanyName LIKE '%ta%
 
+
