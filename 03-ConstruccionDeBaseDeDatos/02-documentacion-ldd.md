@@ -117,3 +117,15 @@ legibles.
 - ck(check)
 - df(default)
 - ix(index)
+
+
+## ALTER TABBLE
+
+Permite modificar una tabla existente
+
+puede:
+ - Agregar columnas
+ - Eliminar coolumnas
+ - Modificar columnas
+ - Agregar restricciones
+ - Eliminar restriccionestelefono LIKE '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'
